@@ -1,3 +1,15 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+.photos-thumbnail{
+
+    width:200px;
+
+}
+
+
+#nav-top{
+  background-color:green;
+}

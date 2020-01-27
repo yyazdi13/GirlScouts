@@ -97,3 +97,25 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+//start the photo carousel
+
+$(document).ready(function(){
+ // $('.carousel').carousel();
+
+
+  $('#carousel1').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+
+
+  setInterval(function() {
+ 
+    $('#carousel1').carousel('next');
+ 
+  }, 2500);   
+});
+
+
+
