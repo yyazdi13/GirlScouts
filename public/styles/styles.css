@@ -13,3 +13,26 @@
 #nav-top{
   background-color:green;
 }
+
+.brand-logo{
+  background-image: image("/assets/images/logo_bw.png");
+}
+
+.car2{
+  /* height: 400px;
+  width: 600px; */
+   height: 100px;
+  width: 150px;
+}
+
+#box1{
+  border: solid 1px black;
+}
+
+#box2{
+  border: solid 1px red;
+}
+
+.mybox{
+  border: solid 1px green;
+}
