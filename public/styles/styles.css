@@ -11,7 +11,9 @@
 
 
 #nav-top{
-  background-color:green;
+  background-color:rgba(23, 110, 55, 1);
+  margin-top:-20px;
+  border-style: none;
 }
 
 .brand-logo{
@@ -32,3 +34,11 @@
   border: solid 1px green;
 }
 
+#barDecoration{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90%;
+  margin: 0px auto;
+}
