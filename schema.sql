@@ -7,6 +7,7 @@ CREATE TABLE user
 (
 Id INT NOT NULL AUTO_INCREMENT,
 username VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
 passwd VARCHAR(100) NOT NULL,
 PRIMARY KEY (Id)
 );
@@ -17,16 +18,18 @@ CREATE TABLE members
     fName VARCHAR(50) NOT NULL,
     lname VARCHAR(50) NOT NULL,
     Category SET('trooper', 'parent', 'leader') NOT NULL,
-    childName VARCHAR(60),
-     PRIMARY KEY (Id),
-     userId INT NOT NULL,
-     FOREIGN KEY (userId) REFERENCES user(Id)
-    
+    child INT,
+    FOREIGN KEY (child) REFERENCES members(Id),
+    userId INT NOT NULL,
+	FOREIGN KEY (userId) REFERENCES user(Id),
+    PRIMARY KEY (Id)
 );
+
+
 
 CREATE TABLE calendar_items
 (
-    Id INT NOT NULL,
+    Id INT NOT NULL AUTO_INCREMENT,
     event_name VARCHAR(30) NOT NULL,
     event_date DATE NOT NULL,
     dt_created DATETIME NOT NULL,
@@ -39,7 +42,7 @@ CREATE TABLE calendar_items
 
 CREATE TABLE news
 (
-    Id INT NOT NULL,
+    Id INT NOT NULL AUTO_INCREMENT,
     newsDate DATE NOT NULL,
     title VARCHAR(100) NOT NULL,
     news_detail VARCHAR(255) NOT NULL,
@@ -52,12 +55,11 @@ CREATE TABLE news
 
 CREATE TABLE blog
 (
-    Id INT NOT NULL,
-    chatComments VARCHAR(200) NOT NULL,
-    blogId INT NOT NULL,
-    dt_created DATETIME NOT NULL,
+    Id INT NOT NULL AUTO_INCREMENT,
+    author INT,
+    FOREIGN KEY (author) REFERENCES members(Id),
+    body VARCHAR(200) NOT NULL,
+    dt_created DATETIME DEFAULT CURRENT_TIMESTAMP,
     dt_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id),
-    FOREIGN KEY (blogId) REFERENCES members(Id)
-
+    PRIMARY KEY (id)
 );
