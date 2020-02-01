@@ -5,7 +5,9 @@
         <div class="card-body">
           <h5 class="card-title">Calendar Page</h5>
           <p> Insert calendar integration here</p>
-          
+          {{#each events}}
+         <li>{{summary}}</li>
+          {{/each}}
             <a href="/">← Back To Home</a>
         </div>
       </div>
