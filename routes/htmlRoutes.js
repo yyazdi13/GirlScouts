@@ -18,6 +18,13 @@ module.exports = function(app) {
  
    });
 
+   //just serve a simple page for calendar integration
+   app.get("/photos",function(req,res){
+    // res.sendFile(path.join(__dirname,"../public/calendar.html"))
+    res.render("photos");
+ 
+   });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {

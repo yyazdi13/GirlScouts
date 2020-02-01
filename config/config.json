@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "blog-db",
+    "password": "boffo",
+    "database": "girlscouts_db",
     "host": "localhost",
     "dialect": "mysql"
   },
