@@ -1,6 +1,13 @@
-
-
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Girl Scouts</title>
+</head>
+<body>
+  
 <div id="container">
 <header>
     <h1>Girl's Scout</h1>
@@ -26,7 +33,7 @@
 
     <div class="col s4 m4">
           
-      <div class="card small">
+      <div class="card small" id="members">
         <!-- Card Content -->
       </div>
                 
@@ -35,7 +42,7 @@
       
     <div class="col s4 m4">
             
-      <div class="card small">
+      <div class="card small" id="blogs">
         <!-- Card Content -->
       </div>
                 
@@ -44,8 +51,13 @@
                   
     <div class="col s4 m4">
             
-      <div class="card small">
-        <!-- Card Content -->
+      <div class="card small" id="events">
+        <h4 id="events-header">Upcoming events</h4>
+        <div id="list">
+        {{#each events}}
+         <strong><li class="events-list">{{summary}} {{start.date}} {{start.dateTime}}</li></strong>
+          {{/each}}
+        </div>
       </div>
                 
 
@@ -63,10 +75,7 @@
   </div>
 
 
-
-
-
-
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+</body>
+</html>
