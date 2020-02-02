@@ -1,20 +1,23 @@
 #events-header{
     text-align: center;
-    background-color: cornsilk;
+    background-color: darkseagreen;
     padding: 0;
+    box-shadow: 1px 1px 1px black;
+
 }
 
 #events{
-    background-image: url("../images/girlies.jpg");
+    background-image: url("../images/moreTrees.jpg");
     display: flex;
     flex-direction: column;
     flex-flow: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .events-list{
     text-align: center;
     font-size: large;
+    line-height: 55px;
     
 }
 
@@ -23,12 +26,13 @@
     clear: both;
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-self: center;
-    align-content: center;
-    background-color: cornsilk;
+    background-color: darkseagreen;
     width: fit-content;
     height: 70%;
     text-align: center;
+    box-shadow: 1px 1px 1px black;
+
 }
+
