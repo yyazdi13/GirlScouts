@@ -61,8 +61,7 @@ header {
 #banner {
   height: 300px;
   background-color: #0b420b;
-  background-image: url("../images/girlcamp.jpg");
-  background-image: url("../images/girlcamp1.jpg");
+ 
   background-position: center;
   background-repeat:no-repeat ;
 }
@@ -77,3 +76,9 @@ h1 {
  
 .galleria{ width:  900px; height: 400px; background: #000 }
 
+
+/* carousel items: */
+
+.carousel-item{
+    height: 150px;
+}

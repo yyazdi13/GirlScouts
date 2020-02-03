@@ -111,3 +111,10 @@ $.get('/api/blog', function(data){
     $("#blogs").append("<li>" + data[i].chatComments + "</li>")
   }
 })
+
+//for carousel in materialize:
+$(document).ready(function(){
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true
+  });
+});
