@@ -1,0 +1,113 @@
+<div id="container">
+  <header>
+    <h1>Girl Scout Troop 1690</h1>
+  </header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center"></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="photos">Photos</a></li>
+        <li><a href="calendar">calendar</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="banner">
+    <H1>banner content</H1>
+
+  </div>
+
+
+  <div id="content">
+    <div class="row">
+
+      <div class="col s4 m4">
+
+        <div class="card small" id="members">
+          <!-- Card Content -->
+        </div>
+
+      </div>
+
+
+      <div class="col s4 m4">
+
+        <div class="card small" id="blogs">
+          <!-- Card Content -->
+        </div>
+
+
+      </div>
+
+      <div class="col s4 m4">
+
+        <div class="card large" id="events">
+          <h4 id="events-header">Upcoming Events</h4>
+          <div id="list">
+            {{#each events}}
+            <strong>
+              <li class="events-list">{{summary}} {{start.date}} {{start.dateTime}}</li>
+            </strong>
+            {{/each}}
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="card large">
+      <!-- Card Content -->
+      <h1>Chat section content</h1>
+    </div>
+
+
+    {{!-- ========= Footer=================== --}}
+
+    <footer class="page-footer">
+      <div class="container footer">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Girl Scout Troop 1690</h5>
+            {{!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> --}}
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul class="left hide-on-med-and-down">
+              <li><a href="/">Home</a></li>
+              <li><a href="photos">Photos</a></li>
+              <li><a href="calendar">calendar</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Copyright
+          {{!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> --}}
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+</body>
+
+</html>
