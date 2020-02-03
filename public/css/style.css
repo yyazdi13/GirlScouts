@@ -1,20 +1,24 @@
 #events-header{
     text-align: center;
-    background-color: cornsilk;
+    background-color: darkseagreen;
     padding: 0;
+    box-shadow: 1px black;
+    border:  1px solid sienna;
+
 }
 
 #events{
-    background-image: url("../images/girlies.jpg");
+    background-image: url("../images/moreTrees.jpg");
     display: flex;
     flex-direction: column;
     flex-flow: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .events-list{
     text-align: center;
     font-size: large;
+    line-height: 55px;
     
 }
 
@@ -23,16 +27,16 @@
     clear: both;
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-self: center;
-    align-content: center;
-    background-color: cornsilk;
+    background-color: darkseagreen;
     width: fit-content;
     height: 70%;
     text-align: center;
-}
+    border:  1px solid sienna;
+    box-shadow: 1px 1px 1px black;
 
+}
 
 
 .list-group-item {
@@ -48,8 +52,8 @@ header {
   font-family: 'Candal', sans-serif;
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(45, 126, 13), 0 0 5px rgb(19, 102, 23);
   font-size: 190px;
-  
 }
+
 .nav-wrapper {
   background-color: #228b22;
 }
@@ -72,3 +76,4 @@ h1 {
 }
  
 .galleria{ width:  900px; height: 400px; background: #000 }
+
