@@ -32,3 +32,43 @@
     height: 70%;
     text-align: center;
 }
+
+
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+
+header {
+  height: 150px;
+ background-image: url("../images/trees.jpg");
+  width: 100%;
+  margin-top: -40px;
+  font-family: 'Candal', sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(45, 126, 13), 0 0 5px rgb(19, 102, 23);
+  font-size: 190px;
+  
+}
+.nav-wrapper {
+  background-color: #228b22;
+}
+
+#banner {
+  height: 300px;
+  background-color: #0b420b;
+  background-image: url("../images/girlcamp.jpg");
+  background-image: url("../images/girlcamp1.jpg");
+  background-position: center;
+  background-repeat:no-repeat ;
+}
+
+#content {
+  background-color: #228b22;
+} 
+
+h1 {
+  margin-left: 500px;
+}
+ 
+.galleria{ width:  900px; height: 400px; background: #000 }

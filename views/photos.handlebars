@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1>Recent photos of the troopers!</h1>
+      <h5>More on the main <a href="https://www.flickr.com/photos/186689024@N06/albums/72157712929505937" >Flickr page</a ></h5>
+      <div class="galleria">
+   
+
+  </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+    //public photo set: 72157712929505937 
+    Galleria.loadTheme("/js/galleria/dist/themes/folio/galleria.folio.js");   //local
+    //Galleria.run('.galleria');
+
+    Galleria.run('.galleria', {
+    flickr: 'set:72157712929505937',
+    flickrOptions: {
+        sort: 'date-posted-asc',
+        imageSize: 'original',
+        max: 50
+    }
+});
+  </script>
