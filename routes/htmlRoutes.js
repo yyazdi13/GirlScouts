@@ -8,17 +8,17 @@ const GOOGLE_CALENDAR_ID = "scogrils74@gmail.com"
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
-  });
+  // app.get("/", function(req, res) {
+  //   db.Example.findAll({}).then(function(dbExamples) {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       examples: dbExamples
+  //     });
+  //   });
+  // });
 
    //just serve a simple page for calendar integration
-   app.get("/calendar",function(req,res){
+   app.get("/",function(req,res){
     // res.sendFile(path.join(__dirname,"../public/calendar.html"))
     // res.render("calendar");
     const jwtClient = new google.auth.JWT(
@@ -46,7 +46,7 @@ module.exports = function(app) {
       } else {
         if (result.data.items.length) {
           // res.send(JSON.stringify({ events: result.data.items }));
-          res.render("calendar", {
+          res.render("index", {
             events: result.data.items
           })
         } else {
@@ -65,6 +65,12 @@ module.exports = function(app) {
       });
     });
   });
+
+   // Render 404 page for any unmatched routes
+   app.get("/photos", function(req, res) {
+    res.render("photos");
+  });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
