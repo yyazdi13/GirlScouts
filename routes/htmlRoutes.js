@@ -66,6 +66,12 @@ module.exports = function(app) {
     });
   });
 
+   // Render 404 page for any unmatched routes
+   app.get("/photos", function(req, res) {
+    res.render("photos");
+  });
+
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
