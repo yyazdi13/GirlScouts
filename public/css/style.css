@@ -38,3 +38,61 @@
 
 }
 
+#blog{
+    display: flex;
+    flex-direction: column;
+    flex-flow: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+#posted-blogs{
+    width: 1100px;
+    height: 500px;
+    background-color: lightyellow;
+    background-image: url('../images/herringbone.png');
+    margin: 15px;
+    border: 3px solid sandybrown;
+    font-size: x-large;
+}
+
+#blog-nav{
+    text-align: center;
+    background-color: seagreen;
+    font-size: larger;
+}
+
+#chatComments{
+    width: 600px;
+    height: 100px;
+    background-color: seagreen;
+    border: 3px solid sandybrown;
+    text-align: center;
+}
+
+#blog-body{
+    background-image: url('../images/camping.jpg');
+}
+
+#blog-footer{
+    background-color: seagreen;
+    height: 100px;
+}
+
+#submit-chat{
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+    background-color: sienna;
+    border: 2px solid seagreen;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+#first_name, #last_name {
+    width: 600px;
+    height: 40px;
+    margin: 0;
+    background-color: seagreen;
+    border: 3px solid sandybrown;
+    text-align: center;
+}

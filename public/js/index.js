@@ -106,8 +106,3 @@ $.get('/api/members', function(data){
   }
 });
 
-$.get('/api/blog', function(data){
-  for (let i = 0; i <data.length; i++){
-    $("#blogs").append("<li>" + data[i].chatComments + "</li>")
-  }
-})

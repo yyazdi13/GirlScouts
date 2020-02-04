@@ -59,7 +59,8 @@ module.exports = function(app) {
   //Create new blog
   app.post("/api/blog", function(req, res){
     db.Blog.create({
-      chatComments: req.body.chatComments
+      chatComments: req.body.chatComments,
+      MemberId: req.body.MemberId
     }).then(function(data){
       res.json(data);
     });
