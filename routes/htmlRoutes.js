@@ -57,24 +57,6 @@ module.exports = function(app) {
  
    });
 
-   app.get("/admin",function(req,res){
-    // res.sendFitle(path.join(__dirname,"../public/calendar.html"))
-    res.render("admin");
- 
-   });
-
-   app.get("/photos",function(req,res){
-    // res.sendFitle(path.join(__dirname,"../public/calendar.html"))
-    res.render("admin");
- 
-   });
-
-   app.get("/signup",function(req,res){
-    // res.sendFitle(path.join(__dirname,"../public/calendar.html"))
-    res.render("admin");
- 
-   });
-
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
@@ -87,6 +69,11 @@ module.exports = function(app) {
    // Render 404 page for any unmatched routes
    app.get("/photos", function(req, res) {
     res.render("photos");
+  });
+
+  // Render 404 page for any unmatched routes
+  app.get("/calendar", function(req, res) {
+    res.render("calendar");
   });
 
 
