@@ -32,7 +32,7 @@ module.exports = function(app) {
 
   //Get all news
   app.get("/api/news", function(req, res){
-    db.News.findAll({}).then(function(data){
+    db.New.findAll({}).then(function(data){
       res.json(data);
     });
   });
@@ -59,12 +59,23 @@ module.exports = function(app) {
   //Create new blog
   app.post("/api/blog", function(req, res){
     db.Blog.create({
-      chatComments: req.body.chatComments
+      chatComments: req.body.chatComments,
+      MemberId: req.body.MemberId
     }).then(function(data){
       res.json(data);
     });
   });
 
+  //create news
+  app.post("/api/news", function(req,res){
+    db.New.create({
+      title: req.body.title,
+      newsDate: req.body.newsDate,
+      newsDetail: req.body.newsDetail,
+      author: req.body.author
+    })
+  });
+  
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {

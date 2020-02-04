@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
-    var News = sequelize.define("new", {
+    var News = sequelize.define("New", {
         newsDate: {
-            type: DataTypes.DATE
+            type: DataTypes.DATEONLY
         },
         title: {
             type: DataTypes.STRING

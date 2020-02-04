@@ -23,9 +23,20 @@ module.exports = function(app) {
   //   });
   // });
    //just serve a simple page for calendar integration
+   app.get("/calendar", function(req, res){
+     res.render("calendar");
+   });
+
+   app.get("/blog", function(req, res){
+     res.render("blog");
+   });
+
+   app.get("/news", function(req, res){
+    res.render("news");
+   });
+
+   //load index page with google api integration
    app.get("/",function(req,res){
-    // res.sendFile(path.join(__dirname,"../public/calendar.html"))
-    // res.render("calendar");
     const jwtClient = new google.auth.JWT(
       GOOGLE_CLIENT_EMAIL,
       null,
