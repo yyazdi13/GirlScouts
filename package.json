@@ -24,6 +24,9 @@
     "express-handlebars": "^3.1.0",
     "googleapis": "^47.0.0",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "handlebars.moment": "^1.0.4",
+    "helper": "0.0.13",
+    "helper-moment": "^0.2.0"
   }
 }

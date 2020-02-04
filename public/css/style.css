@@ -116,11 +116,14 @@ header {
   background-color: #228b22;
 }
 
+.page-footer{
+    background-color: #228b22;
+}
+
 #banner {
   height: 300px;
   background-color: #0b420b;
-  background-image: url("../images/girlcamp.jpg");
-  background-image: url("../images/girlcamp1.jpg");
+ 
   background-position: center;
   background-repeat:no-repeat ;
 }
@@ -130,10 +133,10 @@ header {
 } 
 
 h1 {
-  margin-left: 500px;
+  /* margin-left: 500px; */
 }
  
-.galleria{ width:  900px; height: 400px; background: #000 }
+.galleria{ width:  900px; height: 400px; background:white; }
 
 #news{
   text-align: center;
