@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var loginForm = $(".login");
     var emailInput = $("#email-input");
     var pswdInput = $("#password-input");
-    
-    loginForm.on("submit", function(event) {
+
+    loginForm.on("submit", function (event) {
         event.preventDefault();
         var userData = {
             email: emailInput.val().trim(),
@@ -20,12 +20,17 @@ $(document).ready(function() {
 
     //login user does a post to the api/login route and if successful, redirects us to the members page
     function loginUser(email, password) {
-        $.post("api/login", {
-           email: email,
-           password: password 
+        $.post("/api/login", {
+            email: email,
+            password: password
         })
-        .then(function() {
-            window.location.replace("/members");
-        })
+            .then(function () {
+                window.location.replace("members");
+
+                //If an error
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
     }
-})
+});

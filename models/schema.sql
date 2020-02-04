@@ -2,7 +2,7 @@
 DROP DATABASE IF EXISTS girlscouts_db;
 CREATE DATABASE girlscouts_db;
 
-USE girlscouts_db;
+/*USE girlscouts_db;
 
 CREATE TABLE users
 (
@@ -44,4 +44,4 @@ CREATE TABLE news
     news_detail VARCHAR(255) NOT NULL,
     dt_created DATETIME NOT NULL,
     dt_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+);*/

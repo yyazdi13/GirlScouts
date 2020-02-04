@@ -1,33 +1,38 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
 
-        <title>Login Authentication</title>
-        <meta charset="UTF-8">
+<head>
+  <title>Girl Scout's Login </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">-->
+</head>
 
-    </head>
+<body>
+  <div class="container">
+        <div class="row">
+        <h2>Login Form</h2>
+        <form class="login">
+          <div class="logform">
+            <label for="exampleInputEmail2">Email address</label>
+            <input type="email" class="email2" id="email-input" placeholder="Email">
+          </div>
+          <div class="logform">
+             <label for="pswdInput2">Password</label>
+            <input type="password" class="pswd2" id="password-input" placeholder="Password">
+          </div>
+          <button type="submit" class="logButton">Login</button>
+        </form>
+        <br />
+        <p>Or sign up <a href="/">here</a></p>
+      </div>
+    </div>
+  </div>
 
-    <body>
-        <div class="container">
-            <form class="login">
-            <div class="row">
-                <div class="col">
-                    <h2>Login Form</h2>
-                    <div class="form-group">
-                        <label for="emailInput2">Email address</label>
-                        <input type="email" class="email2" id="email-input" placeholder="Email">
-                        <div class="form-group">
-                            <label for="pswdInput2">Password</label>
-                            <input type="password" class="pswd2" id="password-input" placeholder="Password">
-                        </div>
-                        <button type="submit" class="logButton">Login</button>
-                        </form>
-                        <br />
-                        <p>Or sign up <a href="signup.html">here</a></p>
-                
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
 </html>

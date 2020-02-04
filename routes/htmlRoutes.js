@@ -1,34 +1,34 @@
-var db = require("../models");
+//requiring a path so we can use relative routes to html
+var path = require("path");
+
+//requiring middleware to check if user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+  // If user has account redirect to members page
+  app.get("/", function (req, res) {
+    //res.render("signup");
+    if (req.user) {
+      res.redirect("members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+  app.get("/login", function (req, res) {
+    //if the user already has an account send to members page
+    //console.log("login works");
+    //res.render("login");
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  //If user who is not logged tries to access they are redirected to signup
+  app.get("/members", isAuthenticated, function (req, res) {
+   //res.render("/members")
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+    //if (req.user) {
+      //res.redirect("/signup");
       });
-    });
-  });
-
-   //just serve a simple page for calendar integration
-   app.get("/calendar",function(req,res){
-    // res.sendFile(path.join(__dirname,"../public/calendar.html"))
-    res.render("calendar");
- 
-   });
-
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
-
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
 };
+
