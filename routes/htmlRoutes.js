@@ -26,6 +26,10 @@ module.exports = function(app) {
      res.render("blog");
    });
 
+   app.get("/news", function(req, res){
+    res.render("news");
+   });
+
    //load index page with google api integration
    app.get("/",function(req,res){
     const jwtClient = new google.auth.JWT(
@@ -72,6 +76,12 @@ module.exports = function(app) {
       });
     });
   });
+
+   // Render 404 page for any unmatched routes
+   app.get("/photos", function(req, res) {
+    res.render("photos");
+  });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

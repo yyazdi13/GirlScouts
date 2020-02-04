@@ -98,11 +98,23 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-$.get('/api/members', function(data){
-  for (let i = 0; i < data.length; i++){
-    $("#members").append("<li>" + data[i].first_name + "</li>");
-    $("#members").append("<li>" + data[i].last_name + "</li>");
+// $.get('/api/members', function(data){
+//   for (let i = 0; i < data.length; i++){
+//     $("#members").append("<li>" + data[i].first_name + "</li>");
+//     $("#members").append("<li>" + data[i].last_name + "</li>");
 
-  }
-});
+//   }
+// });
 
+$.get('/api/news', function(data){
+    for (let i = 0; i < data.length; i++){
+      var div = $("<div>");
+      div.addClass("news-div")
+      div.append("<p>" + "<strong>" + "date: " + "</strong>" + data[i].newsDate + "</p>");
+      div.append("<p>" + "<strong>" + "title: " + "</strong>" + data[i].title + "</p>");
+      div.append("<p>" +  "<strong>" + "detail: " + "</strong>" + data[i].newsDetail + "</p>");
+      div.append("<p>" + "<strong>" + "author: " + "</strong>" + data[i].author + "</p>");
+
+      $("#news").append(div);
+    }
+})
