@@ -70,9 +70,14 @@ module.exports = function(app) {
       });
     });
   });
-   // Render 404 page for any unmatched routes
+   // PHotos
    app.get("/photos", function(req, res) {
     res.render("photos");
+  });
+
+  // calendar page
+   app.get("/calendar", function(req, res) {
+    res.render("calendar");
   });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
