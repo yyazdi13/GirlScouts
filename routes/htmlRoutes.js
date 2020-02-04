@@ -71,6 +71,11 @@ module.exports = function(app) {
     res.render("photos");
   });
 
+  // Render 404 page for any unmatched routes
+  app.get("/calendar", function(req, res) {
+    res.render("calendar");
+  });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

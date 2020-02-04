@@ -1,82 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Girl Scouts</title>
-</head>
-<body>
-  
-<div id="container">
-<header>
-    <h1>Girl Scout Troop 1690</h1>
-</header>
-<nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center"></a>
-      <ul class="left hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="photos">Photos</a></li>
-        <li><a href="calendar">calendar</a></li>
-        <li class="active"><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav>
 <div id="banner">
-    
-          
-        </div>
-     
+  <H1>banner content</H1>
+
+</div>
 
 <div id="content">
   <div class="row">
 
     <div class="col s4 m4">
-          
-      <div class="card small" id="members">
-        <!-- Card Content -->
+
+      <div class="card small" id="news">
+        <p>June 12, 2023
+
+          Troop #33 Goes Coast to Coast
+
+          I’m a news story. Click me and then “Edit News” to change my text.
+
+          Sept 15, 2023
+
+          Grand Champion of the 2023 Social Media Leadership Awards Announced
+
+          I’m a news story. Click me and then “Edit News” to open the News editor and change my text. I’m a great place
+          for you to let your users know what’s new with your company.</p>>
       </div>
-                
-    </div>
-      
-      
-    <div class="col s4 m4">
-            
-      <div class="card small" id="blogs">
-        <!-- Card Content -->
-      </div>
-                
 
     </div>
-                  
+
+
     <div class="col s4 m4">
-            
+
+      <div class="card small" id="small-calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?src=scogrils74%40gmail.com&ctz=America%2FChicago"
+          style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+
+    </div>
+
+    <div class="col s4 m4">
+
       <div class="card large" id="events">
         <h4 id="events-header">Upcoming Events</h4>
         <div id="list">
-        {{#each events}}
-         <strong><li class="events-list">{{summary}} {{start.date}} {{start.dateTime}}</li></strong>
+          {{#each events}}
+          <strong>
+            <li class="events-list">{{summary}} {{start.date}} {{start.dateTime}}</li>
+          </strong>
           {{/each}}
         </div>
       </div>
-                
+
 
     </div>
-    
 
-    </div>
+
+  </div>
+
+
+
+
+
+  <div class="card large">
+    <!-- Card Content -->
+    <h1>Chat section content</h1>
+  </div>
+
+
+
+
 
 </div>
 
+</div>
 
-  
-  <div class="card large">
-    <!-- Card Content -->
-  </div>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 </body>
+
 </html>
