@@ -80,3 +80,6 @@ h1 {
  
 .galleria{ width:  900px; height: 400px; background:white; }
 
+.box{
+    border: solid 1px black;
+}
