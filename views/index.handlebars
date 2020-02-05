@@ -60,7 +60,7 @@
 
           {{#each events}}
           <strong>
-            <li class="events-list">{{summary}} {{ moment start.date format="MMMM Do YYYY" }} </li>
+            <li class="events-list"><span class="event-summary">{{summary}}</span> {{ moment start.date format="MMMM Do YYYY" }} </li>
           </strong>
           {{/each}}
 
@@ -105,18 +105,6 @@
 </div>
 
 
-
-{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
-<script>
-  $(document).ready(function () {
-
-    $('.carousel.carousel-slider').carousel({
-      fullWidth: true,
-      indicators: true
-    });
-
-  });
-</script>
 <script src="/js/index.js"></script>
 
 

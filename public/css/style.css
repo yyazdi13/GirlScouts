@@ -26,6 +26,10 @@
     
 }
 
+.event-summary{
+  font-weight: bold;
+}
+
 #list{
     overflow: auto;
     clear: both;
@@ -146,7 +150,7 @@ h1 {
 .galleria{ width:  900px; height: 400px; background:white; }
 
 #news{
-  text-align: center;
+  /* text-align: center; */
   background-color: mintcream;
   line-height: 15px;
   text-emphasis: bolder;
@@ -259,30 +263,7 @@ background-color: white;
 
 }
 
-/* Here is an attempt to make the calendar embed responsive: */
 
-
-/* Responsive iFrame */
-
-.responsive-iframe-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-  }
-  
-  .responsive-iframe-container iframe,
-  .vresponsive-iframe-container object,
-  .vresponsive-iframe-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  }
-
-  /* end of responsive calendar embed */
 
 
 
