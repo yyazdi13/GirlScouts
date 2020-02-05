@@ -4,7 +4,14 @@ var MomentHandler = require("handlebars.moment");
 var handlebars = require('handlebars');
 handlebars.registerHelper('moment', require('helper-moment'));
 var moment = require('helper-moment');
-console.log(moment());
+
+
+//requiring a path so we can use relative routes to html
+var path = require("path");
+
+//requiring middleware to check if user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 MomentHandler.registerHelpers(Handlebars);
 const { google } = require('googleapis');
 const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
@@ -13,15 +20,7 @@ const GOOGLE_CLIENT_EMAIL = "scogrils74@girlscouts5.iam.gserviceaccount.com"
 const GOOGLE_PROJECT_NUMBER = "814714271810"
 const GOOGLE_CALENDAR_ID = "scogrils74@gmail.com"
 module.exports = function(app) {
-  // Load index page
-  // app.get("/", function(req, res) {
-  //   db.Example.findAll({}).then(function(dbExamples) {
-  //     res.render("index", {
-  //       msg: "Welcome!",
-  //       examples: dbExamples
-  //     });
-  //   });
-  // });
+  
    //just serve a simple page for calendar integration
    app.get("/",function(req,res){
     // res.sendFile(path.join(__dirname,"../public/calendar.html"))
@@ -78,6 +77,11 @@ module.exports = function(app) {
   // calendar page
    app.get("/calendar", function(req, res) {
     res.render("calendar");
+  });
+
+  // signup page.  this might not be the right way to do this.  but for debug purposes, this gets to it
+  app.get("/signup", function(req, res) {
+    res.render("signup");
   });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
