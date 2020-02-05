@@ -1,3 +1,7 @@
+.box{
+  border: 1px solid black;
+}
+
 #events-header{
     text-align: center;
     background-color: darkseagreen;
@@ -58,14 +62,14 @@
 
 #blog-nav{
     text-align: center;
-    background-color: #228b22;
+    background-color: #00ae58;
     font-size: larger;
 }
 
 #newsDetail{
     width: 900px;
     height: 300px;
-    background-color: seagreen;
+    background-color: #00ae58;
     margin: 20px;
     border: 3px solid sandybrown;
     text-align: center;
@@ -78,7 +82,7 @@
 }
 
 #blog-footer{
-    background-color: #228b22;
+    background-color:#00ae58;
     height: 100px;
 }
 
@@ -86,7 +90,7 @@
     margin: 10px;
     width: 100px;
     height: 30px;
-    background-color: seagreen;
+    background-color: #00ae58;
     border: 1px solid black;
     box-shadow: 1px 1px 1px 1px black;
 }
@@ -95,7 +99,7 @@
     width: 900px;
     height: 40px;
     margin: 0;
-    background-color: seagreen;
+    background-color: #00ae58;
     border: 3px solid sandybrown;
     text-align: center;
 }
@@ -116,23 +120,23 @@ header {
 }
 
 .nav-wrapper {
-  background-color: #228b22;
+  background-color: #00ae58;
 }
 
 .page-footer{
-    background-color: #228b22;
+    background-color: #00ae58;
 }
 
 #banner {
   height: 300px;
-  background-color: #0b420b;
+  background-color: #00ae58;
  
   background-position: center;
   background-repeat:no-repeat ;
 }
 
 #content {
-  background-color: #228b22;
+  background-color: #00ae58;
 } 
 
 h1 {
@@ -152,7 +156,7 @@ h1 {
 
 .news-div{
   margin: 10px;
-  background-color: seagreen;
+  background-color: #00ae58;
   border: solid 1px darkolivegreen;
 }
 
@@ -219,4 +223,9 @@ h1 {
 .replyInput{
   background-color: cornflowerblue;
   width: 200px;
+}
+
+
+.carousel{
+  height:200px;
 }
