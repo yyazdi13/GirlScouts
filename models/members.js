@@ -20,10 +20,6 @@ module.exports = function(sequelize, DataTypes) {
       },
       role: {
         type: DataTypes.STRING,
-        category: {
-          type: DataTypes.ENUM,
-          values: ["Trooper", "Leader", "Parent"],
-        },
         allowNull: false,
 
       },

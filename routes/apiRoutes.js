@@ -5,6 +5,7 @@ module.exports = function(app) {
   // Using the passport authenticate with local strategy./ If user
   //has valid login send to members page, otherwise send an error
 
+  getMembers();
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
   });
@@ -26,16 +27,32 @@ module.exports = function(app) {
     });
   });
 
-  //app.post("api/signup", function(req, res){
-    //db.Members.create({
-    //  firstName: req.body.firstName,
-     // lastName: req.body.lastName,
-    //  role: req.body.role
-   // })
-   // .then(function() {
-   //   res.redirect(307, "/api/login")
-  //  });
- // });
+  $.post("api/members", member, getMembers);
+  firstName.val("");
+   lastName.val("");
+   mRole.val("");
+   childName.val("");
+   Userid.val("")
+};
+  app.post("/api/members/:id", function(req, res){
+   db.Members.create({
+    fName: req.body.fName,
+    lName: req.body.lName,
+    role: req.body.role,
+   childName: req.body.childName,
+    UserId: req.params.users.id
+
+    //app.post("/api/members/:user_id", (req, res) => {
+      //Members.create({...req.body, userid: req.params.user_id})
+   })
+
+   //})
+  .then(function() {
+   
+    console.log("WHAAT")
+    res.redirect(307, "/api/main");
+  });
+ });
 
   //Route for logging out
   app.get("/logout", function(req, res) {
@@ -44,7 +61,7 @@ module.exports = function(app) {
   });
 
 //Route to get info about user to be used on the client side
-  app.get("api/user_data", function(req, res) {
+  app.get("/api/user_data", function(req, res) {
     if (!req.user) {
       //user not logged in send back empty object
       res.json({});
@@ -56,7 +73,7 @@ module.exports = function(app) {
       });
     }
     });
-};
+  };
 
 
   // Create a new example
@@ -72,4 +89,4 @@ module.exports = function(app) {
  //     res.json(dbExample);
 //    });
 ////  });
-//};
+//});
