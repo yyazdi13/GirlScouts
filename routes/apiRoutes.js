@@ -12,7 +12,9 @@ module.exports = function (app) {
 
   //Route to create user. If created successfully log in user if not send back an error
   app.post("/api/signup", function (req, res) {
+    console.log('about to try to add to db');
     db.User.create({
+      
       email: req.body.email,
       username: req.body.username,
       password: req.body.password
