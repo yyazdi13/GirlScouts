@@ -87,12 +87,22 @@ module.exports = function (app) {
   //If user who is not logged tries to access they are redirected to signup
   //app.get("/members", isAuthenticated, function (req, res) {
     app.get("/members",  function (req, res) {
-    res.render("login")
+    res.render("members")
     //res.sendFile(path.join(__dirname, "../public/members.html"));
     //if (req.user) {
     //res.redirect("/signup");
   });
 
+  app.get("/login", function (req, res) {
+    //if the user already has an account send to members page
+    //console.log("login works");
+    //res.render("login");
+    if (req.user) {
+      res.redirect("/members");
+    }
+    //res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("login")
+  });
 
 
   // Render 404 page for any unmatched routes
