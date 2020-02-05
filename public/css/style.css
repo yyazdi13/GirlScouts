@@ -229,3 +229,21 @@ h1 {
 .carousel{
   height:200px;
 }
+
+/* main headline box */
+.main-headline{
+  font-family: 'Montserrat', sans-serif;
+  
+color:whitesmoke;
+}
+
+.headline-box{
+  
+  padding-left:400px;
+  
+}
+
+.headline-link{
+  font-size: x-large;
+
+}
