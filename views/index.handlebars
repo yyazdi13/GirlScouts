@@ -1,13 +1,33 @@
-<div id="banner">
-  <H1>banner content</H1>
-
-</div>
-
 <div id="content">
+  <div class="row">
+    <div class="col s5 ">
+      <div class="carousel carousel-slider">
+
+        <a class="carousel-item" href="#"><img src="/images/IMG_0355.JPG" style="width:600px;height:400px;"></a>
+        <a class="carousel-item" href="#"><img src="/images/IMG_0284 (1).JPG" style="width:600px;height:400px;"></a>
+        <a class="carousel-item" href="#"><img src="/images/IMG_1515.JPG" style="width:600px;height:400px;"></a>
+        <a class="carousel-item" href="#"><img src="/images/IMG_2090.JPG" style="width:600px;height:400px;"></a>
+      </div>
+
+    </div>
+    <div class="col s7  headline-box">
+
+      <h2 class="main-headline">It's Cookie Season!</h2>
+
+      <h4 class="main-headline">Booths run until Feb 23</h4>
+      <a href="https://www.girlscouts.org/en/cookies/all-about-cookies/Meet-the-Cookies.html"
+        class="main-headline headline-link">Meet the cookies</a>
+
+
+
+    </div>
+  </div>
+
+
   <div class="row">
 
     <div class="col s4 m4">
-          
+
       <div class="card large" id="news">
         <div id="news-header">
           <h4>News</h4>
@@ -20,8 +40,13 @@
     <div class="col s4 m4">
 
       <div class="card small" id="small-calendar">
-        <iframe src="https://calendar.google.com/calendar/embed?src=scogrils74%40gmail.com&ctz=America%2FChicago"
-          style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+        
+
+          <iframe
+          src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=c2NvZ3JpbHM3NEBnbWFpbC5jb20&amp;color=%23B39DDB&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0"
+          style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+
+
       </div>
 
 
@@ -32,15 +57,13 @@
       <div class="card large" id="events">
         <h4 id="events-header">Upcoming Events</h4>
         <div id="list">
-          {{!-- {{#each events}}
-         <strong><li class="events-list">{{summary}} {{ moment d "YY, MMM dd"}} {{start.dateTime}}</li></strong>
-          {{/each}} --}}
-               {{#each events}}
-         <strong><li class="events-list">{{summary}} {{ moment start.date format="MMMM Do YYYY" }} </li></strong>
+
+          {{#each events}}
+          <strong>
+            <li class="events-list"><span class="event-summary">{{summary}}</span> {{ moment start.date format="MMMM Do YYYY" }} </li>
+          </strong>
           {{/each}}
-         {{!-- {{ d "YY, MMM dd"}} --}}
-         {{!-- {{moment date=d format="DD/MM/YYYY"}} --}}
-      {{!-- {{moment d unix=true}} --}}
+
 
 
         </div>
@@ -54,11 +77,23 @@
 
 
 
+  {{!-- <div class="card large" id="chat"> --}}
+  {{!-- <h1>Chat section content</h1>
+    <div id="posted-comments"></div>
+
+    <input type="text" id="chatComments" placeholder="create a blog post here">
+    <button id="submit-chat" type="submit">post</button> --}}
 
 
-  <div class="card large">
-    <!-- Card Content -->
-    <h1>Chat section content</h1>
+
+
+
+  {{!-- </div> --}}
+
+  <div class="row">
+    <div class="col s12 disqus-embed">
+      <div id="disqus_thread"></div>
+    </div>
   </div>
 
 
@@ -70,9 +105,9 @@
 </div>
 
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+
+
 </body>
 
 </html>

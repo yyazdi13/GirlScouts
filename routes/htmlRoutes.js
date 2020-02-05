@@ -62,7 +62,7 @@ module.exports = function(app) {
       } else {
         if (result.data.items.length) {
           // res.send(JSON.stringify({ events: result.data.items }));
-         console.log(result.data.items) 
+         //console.log(result.data.items) 
           res.render("index", {
             events: result.data.items
           })

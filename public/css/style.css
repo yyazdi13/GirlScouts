@@ -1,3 +1,7 @@
+.box{
+  border: 1px solid black;
+}
+
 #events-header{
     text-align: center;
     background-color: darkseagreen;
@@ -20,6 +24,10 @@
     font-size: large;
     line-height: 55px;
     
+}
+
+.event-summary{
+  font-weight: bold;
 }
 
 #list{
@@ -58,41 +66,44 @@
 
 #blog-nav{
     text-align: center;
-    background-color: seagreen;
+    background-color: #00ae58;
     font-size: larger;
 }
 
-#chatComments, #newsDetail{
-    width: 600px;
-    height: 100px;
-    background-color: seagreen;
+#newsDetail{
+    width: 900px;
+    height: 300px;
+    background-color: #00ae58;
+    margin: 20px;
     border: 3px solid sandybrown;
     text-align: center;
 }
 
 #blog-body{
     background-image: url('../images/camping.jpg');
+    background-repeat: round;
+    background-position: center;
 }
 
 #blog-footer{
-    background-color: seagreen;
+    background-color:#00ae58;
     height: 100px;
 }
 
 #submit-chat{
     margin: 10px;
-    width: 120px;
+    width: 100px;
     height: 30px;
-    background-color: sienna;
-    border: 2px solid seagreen;
+    background-color: #00ae58;
+    border: 1px solid black;
     box-shadow: 1px 1px 1px 1px black;
 }
 
 #first_name, #last_name, #title, #newsDate {
-    width: 600px;
+    width: 900px;
     height: 40px;
     margin: 0;
-    background-color: seagreen;
+    background-color: #00ae58;
     border: 3px solid sandybrown;
     text-align: center;
 }
@@ -113,23 +124,23 @@ header {
 }
 
 .nav-wrapper {
-  background-color: #228b22;
+  background-color: #00ae58;
 }
 
 .page-footer{
-    background-color: #228b22;
+    background-color: #00ae58;
 }
 
 #banner {
   height: 300px;
-  background-color: #0b420b;
+  background-color: #00ae58;
  
   background-position: center;
   background-repeat:no-repeat ;
 }
 
 #content {
-  background-color: #228b22;
+  background-color: #00ae58;
 } 
 
 h1 {
@@ -139,7 +150,7 @@ h1 {
 .galleria{ width:  900px; height: 400px; background:white; }
 
 #news{
-  text-align: center;
+  /* text-align: center; */
   background-color: mintcream;
   line-height: 15px;
   text-emphasis: bolder;
@@ -149,10 +160,110 @@ h1 {
 
 .news-div{
   margin: 10px;
-  background-color: seagreen;
+  background-color: #00ae58;
   border: solid 1px darkolivegreen;
 }
 
 #news-header{
   background: peru;
 }
+
+#chatComments{
+  text-align: center;
+  display: flex;
+  align-self: center;
+  width: 400px;
+  height: 180px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+
+::placeholder{
+  color: black;
+}
+
+#chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/herringbone.png');
+  padding: 0;
+  margin: 0;
+}
+
+.comments{
+  width: 600px;
+  background-color: rgb(181, 219, 181);
+  margin: 5px;
+  text-align: center;
+  border: 1px solid sienna;
+}
+
+#posted-comments{
+  overflow: auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 800px;
+  height: 900px;
+  margin: 15px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.reply{
+  background-color: rgb(226, 226, 116);
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: flex-start;
+  margin-left: 100px;
+}
+
+.replyInput{
+  background-color: cornflowerblue;
+  width: 200px;
+}
+
+
+.carousel{
+  height:200px;
+}
+
+/* main headline box */
+.main-headline{
+  font-family: 'Montserrat', sans-serif;
+  
+color:whitesmoke;
+}
+
+.headline-box{
+  
+  padding-left:400px;
+  
+}
+
+.headline-link{
+  font-size: x-large;
+
+}
+
+.logo{
+
+  width:10px;
+  height:10px;
+}
+
+.disqus-embed{
+background-color: white;
+
+}
+
+
+
+
+
