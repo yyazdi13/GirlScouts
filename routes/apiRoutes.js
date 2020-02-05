@@ -60,7 +60,6 @@ module.exports = function(app) {
   app.post("/api/blog", function(req, res){
     db.Blog.create({
       chatComments: req.body.chatComments,
-      MemberId: req.body.MemberId
     }).then(function(data){
       res.json(data);
     });

@@ -98,13 +98,6 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-// $.get('/api/members', function(data){
-//   for (let i = 0; i < data.length; i++){
-//     $("#members").append("<li>" + data[i].first_name + "</li>");
-//     $("#members").append("<li>" + data[i].last_name + "</li>");
-
-//   }
-// });
 
 $.get('/api/news', function(data){
     for (let i = 0; i < data.length; i++){
@@ -117,4 +110,20 @@ $.get('/api/news', function(data){
 
       $("#news").append(div);
     }
+})
+
+$("#post").on("click", function(event){
+  event.preventDefault();
+  var newChat = {
+    chatComments: $("#chatComments").val().trim()
+  }
+  $.post('/api/blog', newChat).then(function(){
+    location.reload();
+  })
+})
+
+$.get('/api/blog', function(data){
+  for (let i = 0; i < data.length; i++){
+    $("#posted-comments").append("<div>" + data[i].chatComments + "</div>")
+  }
 })
