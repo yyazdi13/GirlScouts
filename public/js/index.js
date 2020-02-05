@@ -112,7 +112,7 @@ $.get('/api/news', function(data){
     }
 })
 
-$("#post").on("click", function(event){
+$("#submit-chat").on("click", function(event){
   event.preventDefault();
   var newChat = {
     chatComments: $("#chatComments").val().trim()
@@ -124,6 +124,25 @@ $("#post").on("click", function(event){
 
 $.get('/api/blog', function(data){
   for (let i = 0; i < data.length; i++){
-    $("#posted-comments").append("<div>" + data[i].chatComments + "</div>")
+    var chatDiv = $("<div>");
+    var reply = $("<button>");
+    reply.addClass("reply");
+    reply.text("reply");
+    chatDiv.addClass("comments");
+    chatDiv.text(data[i].chatComments + " posted by: " + data[i].createdAt)
+    $("#posted-comments").append(chatDiv);
+    $("#posted-comments").append(reply)
+    //name here
+    respond(reply, chatDiv);
   }
 })
+
+function respond (reply, chatDiv){
+  reply.on("click", function(){
+  var replyInput = $("<input>");
+  replyInput.addClass("replyInput");
+  replyInput.text("hello")
+  chatDiv.append(replyInput);
+  //make reply show
+})
+}
