@@ -7,7 +7,7 @@
   <div class="row">
 
     <div class="col s4 m4">
-          
+
       <div class="card large" id="news">
         <div id="news-header">
           <h4>News</h4>
@@ -32,15 +32,13 @@
       <div class="card large" id="events">
         <h4 id="events-header">Upcoming Events</h4>
         <div id="list">
-          {{!-- {{#each events}}
-         <strong><li class="events-list">{{summary}} {{ moment d "YY, MMM dd"}} {{start.dateTime}}</li></strong>
-          {{/each}} --}}
-               {{#each events}}
-         <strong><li class="events-list">{{summary}} {{ moment start.date format="MMMM Do YYYY" }} </li></strong>
+
+          {{#each events}}
+          <strong>
+            <li class="events-list">{{summary}} {{ moment start.date format="MMMM Do YYYY" }} </li>
+          </strong>
           {{/each}}
-         {{!-- {{ d "YY, MMM dd"}} --}}
-         {{!-- {{moment date=d format="DD/MM/YYYY"}} --}}
-      {{!-- {{moment d unix=true}} --}}
+
 
 
         </div>
@@ -54,14 +52,23 @@
 
 
 
-
-
-  <div class="card large" id="chat">
-    <h1>Chat section content</h1>
+  {{!-- <div class="card large" id="chat"> --}}
+    {{!-- <h1>Chat section content</h1>
     <div id="posted-comments"></div>
 
     <input type="text" id="chatComments" placeholder="create a blog post here">
-    <button id="submit-chat" type="submit">post</button>
+    <button id="submit-chat" type="submit">post</button> --}}
+
+
+    
+
+                            
+  {{!-- </div> --}}
+
+  <div class="row">
+    <div class="col s12 disqus-embed">
+<div id="disqus_thread"></div>
+    </div>
   </div>
 
 
@@ -76,6 +83,26 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "http://localhost:3000/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 21; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gs1690.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 
 </html>
