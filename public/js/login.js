@@ -20,17 +20,18 @@ $(document).ready(function () {
 
     //login user does a post to the api/login route and if successful, redirects us to the members page
     function loginUser(email, password) {
-        alert("about to post member data");
+        // alert("about to post member data");
         $.post("/api/login", {
             email: email,
             password: password
         })
             .then(function () {
-                window.location.replace("members");
+                console.log("from login.js, going to /")
+                window.location.replace("/");
 
                 //If an error
             })
-            .catch(function(err) {
+            .catch(function (err) {
                 console.log(err);
             });
     }

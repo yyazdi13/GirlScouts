@@ -50,7 +50,7 @@ module.exports = function (app) {
       } else {
         if (result.data.items.length) {
           // res.send(JSON.stringify({ events: result.data.items }));
-          console.log(result.data.items)
+          //console.log(result.data.items)
           res.render("index", {
             events: result.data.items
           })
@@ -96,14 +96,14 @@ module.exports = function (app) {
   app.get("/login", function (req, res) {
     //if the user already has an account send to members page
     //console.log("login works");
-    //res.render("login");
+    res.render("login");
     if (req.user) {
-      res.redirect("/members");
+      res.render("members");
     }
     //res.sendFile(path.join(__dirname, "../public/login.html"));
-    res.render("login")
+   // res.render("/");
+    //res.render("login")
   });
-
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
